@@ -7,6 +7,7 @@ import io.micronaut.http.annotation.Post
 import io.micronaut.http.uri.UriBuilder
 import io.micronaut.validation.Validated
 import javax.inject.Inject
+import javax.transaction.Transactional
 import javax.validation.Valid
 
 @Validated
@@ -14,11 +15,11 @@ import javax.validation.Valid
 class CadastraAutorController(@Inject val autorRepository: AutorRepository) {  /* @Inject pode ser omitido */
 
     @Post
+    @Transactional
     fun cadastra(@Body @Valid request: NovoAutorRequest) : HttpResponse<Any> {  /* @Body pode ser omitido */
         val autor = request.paraAutor()
 
         autorRepository.save(autor)
-
         val uri = UriBuilder.of("/autores/{id}")
                             .expand(mutableMapOf(Pair("id", autor.id)))
 
