@@ -45,6 +45,8 @@ dependencies {
     implementation("io.micronaut.data:micronaut-data-hibernate-jpa")
     runtime("io.micronaut.sql:micronaut-jdbc-hikari")
     runtimeOnly("com.h2database:h2")
+
+    implementation("io.micronaut.xml:micronaut-jackson-xml")
 }
 
 
