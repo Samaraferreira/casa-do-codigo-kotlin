@@ -1,4 +1,4 @@
-package br.com.zup.autores
+package br.com.zup.endereco
 
 import com.fasterxml.jackson.annotation.JsonProperty
 

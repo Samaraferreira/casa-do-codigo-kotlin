@@ -1,4 +1,4 @@
-package br.com.zup.autores
+package br.com.zup.endereco
 
 import io.micronaut.http.HttpResponse
 import io.micronaut.http.annotation.Get

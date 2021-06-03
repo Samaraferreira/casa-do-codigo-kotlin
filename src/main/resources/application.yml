@@ -3,11 +3,11 @@ micronaut:
     name: casaDoCodigo
 datasources:
   default:
-    url: ${DB_URL:`jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE`}
-    driverClassName: org.h2.Driver
-    username: ${DB_USER:sa}
-    password: ${DB_PASSWORD:''}
-    dialect: H2
+    url: ${DB_URL:`jdbc:mysql://localhost:3306/cdc?createDatabaseIfNotExist=true&useTimezone=true&serverTimezone=UTC`}
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: ${DB_USER:root}
+    password: ${DB_PASSWORD:root}
+    dialect: org.hibernate.dialect.MySQL5InnoDBDialect
 jpa:
   default:
     properties:

@@ -1,5 +1,6 @@
 package br.com.zup.autores
 
+import br.com.zup.endereco.Endereco
 import java.time.LocalDateTime
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue

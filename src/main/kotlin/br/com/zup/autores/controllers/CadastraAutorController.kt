@@ -1,5 +1,8 @@
-package br.com.zup.autores
+package br.com.zup.autores.controllers
 
+import br.com.zup.autores.AutorRepository
+import br.com.zup.autores.NovoAutorRequest
+import br.com.zup.endereco.EnderecoClient
 import io.micronaut.http.HttpResponse
 import io.micronaut.http.annotation.Body
 import io.micronaut.http.annotation.Controller
@@ -8,7 +11,6 @@ import io.micronaut.http.client.exceptions.HttpClientResponseException
 import io.micronaut.http.uri.UriBuilder
 import io.micronaut.validation.Validated
 import org.slf4j.LoggerFactory
-import javax.inject.Inject
 import javax.transaction.Transactional
 import javax.validation.Valid
 

@@ -43,10 +43,14 @@ dependencies {
 
     // JPA
     implementation("io.micronaut.data:micronaut-data-hibernate-jpa")
-    runtime("io.micronaut.sql:micronaut-jdbc-hikari")
-    runtimeOnly("com.h2database:h2")
+    implementation("io.micronaut.sql:micronaut-jdbc-hikari")
+    runtimeOnly("mysql:mysql-connector-java")
 
     implementation("io.micronaut.xml:micronaut-jackson-xml")
+
+    // Testes
+    testImplementation("org.mockito:mockito-core:3.8.0")
+    runtimeOnly("com.h2database:h2")
 }
 
 
